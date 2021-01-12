@@ -1,15 +1,28 @@
 let Header = () => {
-    return <span>Design a header for your blog</span>
+    return (
+        <h1>Kristin Hargrove's Fun-times Blog</h1>
+    )
 }
-let Article = () => {
-    return <span>Write and design your blog article</span>
+let Article = (props) => {
+    return (
+        <article>{props.articlename}</article>
+    )
 }
 let Footer = () => {
-    return <span>Design a footer for your blog</span>
+    return (
+        <footer>designed by KH</footer>
+    )
 }
 
 let Blog = () => {
-    return <span>Make this Component render the header, article, and footer</span>
+    return (
+        <div>
+            <Header />
+            <Article articlename="Hello world" />
+            <Article articlename="Goodbye world" />
+            <Footer />
+        </div>
+    )
 }
 
 

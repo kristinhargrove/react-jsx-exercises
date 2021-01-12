@@ -1,17 +1,40 @@
 let ProfilePic = () => {
-    return <span>Make this component render an image</span>
+    return (
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Drake_at_The_Carter_Effect_2017_%2836818935200%29_%28cropped%29.jpg" />
+        </div>
+    )
 }
 
-let CommentBody = () => {
-    return <span>Make this component render a username in bold above the comment text</span>
+let CommentBody = (props) => {
+    return (
+        <div>
+            <strong>{props.username}</strong>
+            <p>{props.comment}</p>
+        </div>
+    )
 }
 
 let Comment = () => {
-    return <span>Make each comment render a profile picture and the comment body</span>
+    return (
+        <div>
+            <ProfilePic />
+            <CommentBody comment = "hello world"/>
+        </div>
+    )
 }
 
 let Comments = () => {
-    return <span>Make this component render a list of comments</span>
+    return (
+        <div> 
+            <ul>
+                <li><Comment /></li>
+                <li><Comment /></li>
+                <li><Comment /></li>
+                <li><Comment /></li>
+            </ul>
+        </div>
+    )
 }
 
 ReactDOM.render(<Comments />, document.getElementById('root'))
