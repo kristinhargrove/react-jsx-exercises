@@ -1,8 +1,6 @@
 let ListGroupItem = (props) => {
     return (
-        <div>
             <li>{props.name}</li>
-        </div>
     )
 }
 

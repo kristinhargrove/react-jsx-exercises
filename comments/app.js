@@ -19,7 +19,7 @@ let Comment = () => {
     return (
         <div>
             <ProfilePic />
-            <CommentBody comment = "hello world"/>
+            <CommentBody comment="hello world" username="drake"/>
         </div>
     )
 }
